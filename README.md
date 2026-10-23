@@ -26,3 +26,25 @@ This Laravel project implements MySQL tables for managing leads and contacts, co
 2. Run `composer install`.
 3. Configure your `.env` file with database credentials.
 4. Run `php artisan migrate:fresh --seed` to run migrations and seed sample data.
+
+
+## Entity Relationship Diagram (ERD)
+
+```text
++-------------------+       +-------------------+
+|       users       |       |       leads       |
++-------------------+       +-------------------+
+| id (PK)           | 1---* | id (PK)           |
+| name              |       | user_id (FK)      |
+| email             |       | name, email, etc. |
++-------------------+       +-------------------+
+                                     |
+                                     | 1---*
+                             +-------------------+
+                             |     contacts      |
+                             +-------------------+
+                             | id (PK)           |
+                             | lead_id (FK)      |
+                             | notes, etc.       |
+                             +-------------------+
+
