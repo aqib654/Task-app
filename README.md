@@ -1,30 +1,3 @@
 ## Entity Relationship Diagram (ERD)
 
-```mermaid
-erDiagram
-    users ||--o{ leads : "has"
-    leads ||--o{ contacts : "contains"
-
-    users {
-        bigint id PK
-        string name
-        string email
-    }
-
-    leads {
-        bigint id PK
-        bigint user_id FK
-        string name
-        string email
-        string phone
-        string status
-    }
-
-    contacts {
-        bigint id PK
-        bigint lead_id FK
-        string name
-        string email
-        string phone
-        string status
-    }
+![Database ERD](https://mermaid.ink/img/ZXJEaWFncmFtCiAgICB1c2VycyB8fC0tb3sgbGVhZHMgOiAiaGFzIgogICAgbGVhZHMgfHwtLW97IGNvbnRhY3RzIDogImNvbnRhaW5zIgoKICAgIHVzZXJzIHsKICAgICAgICBiaWdpbnQgaWQgUEsKICAgICAgICBzdHJpbmcgbmFtZQogICAgICAgIHN0cmluZyBlbWFpbAogICAgfQoKICAgIGxlYWRzIHsKICAgICAgICBiaWdpbnQgaWQgUEsKICAgICAgICBiaWdpbnQgdXNlcl9pZCBGSwogICAgICAgIHN0cmluZyJuYW1lCiAgICAgICAgc3RyaW5nIGVtYWlsCiAgICAgICAgc3RyaW5nIHBob25lCiAgICAgICAgc3RyaW5nIHN0YXR1cwogICAgfQoKICAgIGNvbnRhY3RzIHsKICAgICAgICBiaWdpbnQgaWQgUEsKICAgICAgICBiaWdpbnQgbGVhZF9pZCBGSwogICAgICAgIHN0cmluZyJuYW1lCiAgICAgICAgc3RyaW5nIGVtYWlsCiAgICAgICAgc3RyaW5nIHBob25lCiAgICAgICAgc3RyaW5nIHN0YXR1cwogICAgfQ==?bgColor=white)
